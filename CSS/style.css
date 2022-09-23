@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif, Calibri;
+    padding: 0;
+    font-size: 100%;
+    outline: none;
+    color: white;
+}
+
+body{
+    background: url('../images/back.jpg');
+    background-repeat: no-repeat;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.defold{
+    padding: 20px;
+    font-size: 3vh;
+    margin-bottom: 50px;
+}
+.defold, .weather-block{
+    background: rgba(120,120,120,0.8);
+    text-align: center;
+    border-radius: 25px;
+    margin-top: 50px;
+}
+.weather-block{
+    width: 350px;
+    height: 420px;
+}
+.town-select{
+    margin: 30px auto;
+}
+select{
+    min-width: 300px;
+    min-height: 40px;
+    font-size: 30px;
+    text-align: center;
+    border-radius: 10px;
+    background: darkgray;
+    color: black;
+    font-weight: bold;
+}
+option{
+    color: black;
+}
+
+.out{
+    display: grid;
+    grid-template-areas:
+    "temp city"
+    "imag desk"
+    "wind humi"
+    "pres pres";
+    grid-template-rows: 80px 80px 80px 80px;
+    grid-template-columns: 0.8fr 1fr;
+    font-size: 25px;
+    justify-items: center;
+    align-items: center;
+}
+
+.temperature{
+    grid-area: temp;
+}
+.town{
+    grid-area: city;
+}
+.description{
+    grid-area: desk;
+}
+.icon{
+    grid-area: imag;
+}
+.humidity{
+    grid-area: humi;
+}
+.wind{
+    grid-area: wind;
+    display: flex;
+    margin-right: 5px;
+    margin-left: 30px;
+}
+.wind-speed{
+    margin-right: 15px;
+}
+.wind-deg img{
+    width: 24px;
+}
+
+.pressure{
+    grid-area: pres;
+}
